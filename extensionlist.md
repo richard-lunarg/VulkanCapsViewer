@@ -15,7 +15,7 @@
 
 * VK_ANDROID_external_format_resolve
 
-# ARM (12)
+# ARM (13)
 
 * VK_ARM_rasterization_order_attachment_access
 * VK_ARM_shader_core_properties
@@ -29,8 +29,9 @@
 * VK_ARM_shader_instrumentation
 * VK_ARM_format_pack
 * VK_ARM_data_graph_optical_flow
+* VK_ARM_data_graph_neural_accelerator_statistics
 
-# EXT (108)
+# EXT (109)
 
 * VK_EXT_transform_feedback
 * VK_EXT_texture_compression_astc_hdr
@@ -77,6 +78,7 @@
 * VK_EXT_texture_compression_astc_3d
 * VK_EXT_private_data
 * VK_EXT_pipeline_creation_cache_control
+* VK_EXT_shader_split_barrier
 * VK_EXT_descriptor_buffer
 * VK_EXT_graphics_pipeline_library
 * VK_EXT_mesh_shader
@@ -156,7 +158,7 @@
 
 * VK_INTEL_shader_integer_functions2
 
-# KHR (86)
+# KHR (88)
 
 * VK_KHR_dynamic_rendering
 * VK_KHR_multiview
@@ -243,7 +245,9 @@
 * VK_KHR_depth_clamp_zero_one
 * VK_KHR_robustness2
 * VK_KHR_present_mode_fifo_latest_ready
+* VK_KHR_opacity_micromap
 * VK_KHR_maintenance10
+* VK_KHR_maintenance11
 
 # MESA (1)
 
@@ -253,7 +257,7 @@
 
 * VK_MSFT_layered_driver
 
-# NV (44)
+# NV (45)
 
 * VK_NV_corner_sampled_image
 * VK_NV_shader_sm_builtins
@@ -299,15 +303,19 @@
 * VK_NV_cooperative_matrix2
 * VK_NV_present_metering
 * VK_NV_compute_occupancy_priority
+* VK_NV_cooperative_matrix_decode_vector
 
 # NVX (1)
 
 * VK_NVX_multiview_per_view_attributes
 
-# QCOM (14)
+# QCOM (17)
 
 * VK_QCOM_cooperative_matrix_conversion
+* VK_QCOM_elapsed_timer_query
 * VK_QCOM_queue_perf_hint
+* VK_QCOM_image_processing3
+* VK_QCOM_shader_multiple_wait_queues
 * VK_QCOM_tile_shading
 * VK_QCOM_fragment_density_map_offset
 * VK_QCOM_image_processing
@@ -325,10 +333,11 @@
 
 * VK_QNX_external_memory_screen_buffer
 
-# SEC (2)
+# SEC (3)
 
 * VK_SEC_amigo_profiling
 * VK_SEC_pipeline_cache_incremental_mode
+* VK_SEC_throttle_hint
 
 # VALVE (5)
 
@@ -338,4 +347,4 @@
 * VK_VALVE_fragment_density_map_layered
 * VK_VALVE_shader_mixed_float_dot_product
 
-Total: 289 extensions
+Total: 298 extensions
