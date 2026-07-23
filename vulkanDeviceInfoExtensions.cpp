@@ -2780,6 +2780,15 @@ void VulkanDeviceInfoExtensions::readPhysicalFeatures_EXT() {
 		pushFeature2(extension, "vertexAttributeRobustness", extFeatures->vertexAttributeRobustness);
 		delete extFeatures;
 	}
+	if (extensionSupported("VK_EXT_multisampled_render_to_swapchain")) {
+		const char* extension("VK_EXT_multisampled_render_to_swapchain");
+		VkPhysicalDeviceMultisampledRenderToSwapchainFeaturesEXT* extFeatures = new VkPhysicalDeviceMultisampledRenderToSwapchainFeaturesEXT{};
+		extFeatures->sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_MULTISAMPLED_RENDER_TO_SWAPCHAIN_FEATURES_EXT;
+		deviceFeatures2 = initDeviceFeatures2(extFeatures);
+		vulkanContext.vkGetPhysicalDeviceFeatures2KHR(device, &deviceFeatures2);
+		pushFeature2(extension, "multisampledRenderToSwapchain", extFeatures->multisampledRenderToSwapchain);
+		delete extFeatures;
+	}
 	if (extensionSupported("VK_EXT_fragment_density_map_offset")) {
 		const char* extension("VK_EXT_fragment_density_map_offset");
 		VkPhysicalDeviceFragmentDensityMapOffsetFeaturesEXT* extFeatures = new VkPhysicalDeviceFragmentDensityMapOffsetFeaturesEXT{};
@@ -2841,6 +2850,18 @@ void VulkanDeviceInfoExtensions::readPhysicalFeatures_EXT() {
 		deviceFeatures2 = initDeviceFeatures2(extFeatures);
 		vulkanContext.vkGetPhysicalDeviceFeatures2KHR(device, &deviceFeatures2);
 		pushFeature2(extension, "shaderSubgroupPartitioned", extFeatures->shaderSubgroupPartitioned);
+		delete extFeatures;
+	}
+	if (extensionSupported("VK_EXT_shader_ocp_microscaling_types")) {
+		const char* extension("VK_EXT_shader_ocp_microscaling_types");
+		VkPhysicalDeviceShaderOCPMicroscalingTypesFeaturesEXT* extFeatures = new VkPhysicalDeviceShaderOCPMicroscalingTypesFeaturesEXT{};
+		extFeatures->sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_OCP_MICROSCALING_TYPES_FEATURES_EXT;
+		deviceFeatures2 = initDeviceFeatures2(extFeatures);
+		vulkanContext.vkGetPhysicalDeviceFeatures2KHR(device, &deviceFeatures2);
+		pushFeature2(extension, "shaderFloat4", extFeatures->shaderFloat4);
+		pushFeature2(extension, "shaderFloat6", extFeatures->shaderFloat6);
+		pushFeature2(extension, "shaderFloat8UnsignedE8M0", extFeatures->shaderFloat8UnsignedE8M0);
+		pushFeature2(extension, "shaderMXInt8", extFeatures->shaderMXInt8);
 		delete extFeatures;
 	}
 	if (extensionSupported("VK_EXT_primitive_restart_index")) {
@@ -3638,6 +3659,15 @@ void VulkanDeviceInfoExtensions::readPhysicalFeatures_KHR() {
 		pushFeature2(extension, "videoMaintenance2", extFeatures->videoMaintenance2);
 		delete extFeatures;
 	}
+	if (extensionSupported("VK_KHR_video_encode_feedback2")) {
+		const char* extension("VK_KHR_video_encode_feedback2");
+		VkPhysicalDeviceVideoEncodeFeedback2FeaturesKHR* extFeatures = new VkPhysicalDeviceVideoEncodeFeedback2FeaturesKHR{};
+		extFeatures->sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_VIDEO_ENCODE_FEEDBACK_2_FEATURES_KHR;
+		deviceFeatures2 = initDeviceFeatures2(extFeatures);
+		vulkanContext.vkGetPhysicalDeviceFeatures2KHR(device, &deviceFeatures2);
+		pushFeature2(extension, "videoEncodeFeedback2", extFeatures->videoEncodeFeedback2);
+		delete extFeatures;
+	}
 	if (extensionSupported("VK_KHR_depth_clamp_zero_one")) {
 		const char* extension("VK_KHR_depth_clamp_zero_one");
 		VkPhysicalDeviceDepthClampZeroOneFeaturesKHR* extFeatures = new VkPhysicalDeviceDepthClampZeroOneFeaturesKHR{};
@@ -3692,6 +3722,15 @@ void VulkanDeviceInfoExtensions::readPhysicalFeatures_KHR() {
 		deviceFeatures2 = initDeviceFeatures2(extFeatures);
 		vulkanContext.vkGetPhysicalDeviceFeatures2KHR(device, &deviceFeatures2);
 		pushFeature2(extension, "maintenance11", extFeatures->maintenance11);
+		delete extFeatures;
+	}
+	if (extensionSupported("VK_KHR_extended_flags")) {
+		const char* extension("VK_KHR_extended_flags");
+		VkPhysicalDeviceExtendedFlagsFeaturesKHR* extFeatures = new VkPhysicalDeviceExtendedFlagsFeaturesKHR{};
+		extFeatures->sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_EXTENDED_FLAGS_FEATURES_KHR;
+		deviceFeatures2 = initDeviceFeatures2(extFeatures);
+		vulkanContext.vkGetPhysicalDeviceFeatures2KHR(device, &deviceFeatures2);
+		pushFeature2(extension, "extendedFlags", extFeatures->extendedFlags);
 		delete extFeatures;
 	}
 }

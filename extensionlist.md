@@ -1,5 +1,6 @@
-# AMD (5)
+# AMD (6)
 
+* VK_AMD_gpa_interface
 * VK_AMD_shader_core_properties
 * VK_AMD_shader_core_properties2
 * VK_AMD_device_coherent_memory
@@ -31,7 +32,7 @@
 * VK_ARM_data_graph_optical_flow
 * VK_ARM_data_graph_neural_accelerator_statistics
 
-# EXT (109)
+# EXT (111)
 
 * VK_EXT_transform_feedback
 * VK_EXT_texture_compression_astc_hdr
@@ -134,6 +135,7 @@
 * VK_EXT_ray_tracing_invocation_reorder
 * VK_EXT_depth_clamp_control
 * VK_EXT_vertex_attribute_robustness
+* VK_EXT_multisampled_render_to_swapchain
 * VK_EXT_fragment_density_map_offset
 * VK_EXT_zero_initialize_device_memory
 * VK_EXT_shader_64bit_indexing
@@ -141,6 +143,7 @@
 * VK_EXT_shader_long_vector
 * VK_EXT_shader_uniform_buffer_unsized_array
 * VK_EXT_shader_subgroup_partitioned
+* VK_EXT_shader_ocp_microscaling_types
 * VK_EXT_primitive_restart_index
 
 # HUAWEI (4)
@@ -158,7 +161,7 @@
 
 * VK_INTEL_shader_integer_functions2
 
-# KHR (88)
+# KHR (90)
 
 * VK_KHR_dynamic_rendering
 * VK_KHR_multiview
@@ -242,12 +245,14 @@
 * VK_KHR_shader_fma
 * VK_KHR_maintenance9
 * VK_KHR_video_maintenance2
+* VK_KHR_video_encode_feedback2
 * VK_KHR_depth_clamp_zero_one
 * VK_KHR_robustness2
 * VK_KHR_present_mode_fifo_latest_ready
 * VK_KHR_opacity_micromap
 * VK_KHR_maintenance10
 * VK_KHR_maintenance11
+* VK_KHR_extended_flags
 
 # MESA (1)
 
@@ -347,4 +352,4 @@
 * VK_VALVE_fragment_density_map_layered
 * VK_VALVE_shader_mixed_float_dot_product
 
-Total: 298 extensions
+Total: 303 extensions
