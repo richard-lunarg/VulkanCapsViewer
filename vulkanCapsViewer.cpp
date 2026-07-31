@@ -706,16 +706,15 @@ bool VulkanCapsViewer::initVulkan()
         for (auto& reqExt : reqInstanceExtensions) {
             if (strcmp(ext.extensionName, reqExt) == 0) {
                 enabledExtensions.push_back(reqExt);
+                break;
             }
         }
 
-// IF the portability extension is available, enable it here.
-#if VK_HEADER_VERSION >= 216
+        // IF the portability extension is available, enable it here.
         if(strcmp(ext.extensionName, VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME) == 0) {
             instanceCreateInfo.flags |= VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_BIT_KHR;
             enabledExtensions.push_back(VK_KHR_PORTABILITY_ENUMERATION_EXTENSION_NAME);
         }
-#endif
     }
 
     instanceCreateInfo.ppEnabledExtensionNames = enabledExtensions.data();
